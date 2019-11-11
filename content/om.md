@@ -21,8 +21,7 @@ Om
 
 Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
 
-Skriv några kloka ord om kursen?
+Detta är om sidan till kursen design. Förhoppningsvis kommer sidan bli väldigt vaker i slutändan.
 
-Lägg till en representativ bild för kursen, enligt ditt egna val.
 
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
+[FIGURE src=image/Amrita.jpg?w=300 caption="En fin bil som demobild."]
