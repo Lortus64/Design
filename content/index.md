@@ -1,5 +1,14 @@
 ---
 title: "Min fina titel"
+views: 
+    byline:
+        region: main
+        template: anax/v2/block/default
+        sort: 2
+        data:
+            meta:
+                type: single
+                route: block/byline
 ---
 Min me-sida i kursen design
 =========================
@@ -17,5 +26,3 @@ På gymnasiet pluggade jag teknik med inriktning programmering och sen gick jag 
 Om ni har tur så kan ni hitta mig på studentpuben eftersom jag är ganska aktiv inom kårlivet. Det är ganska lätt att hitta mig då jag har lampor på min ovve.
 
 Vi höres och synes!
-
-/Adam Eriksson
