@@ -8,3 +8,9 @@ v1.0.* (2019-11-11)
 v1.1* (2019-11-14)
 ------------------
 *Adding new css
+
+v2.0* (2019-11-25)
+------------------
+kmom02 färdig
+less implementerad
+lite ny design

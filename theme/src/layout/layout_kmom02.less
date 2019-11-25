@@ -1,0 +1,50 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+// .inner-wrap {
+//     max-width: 1100px;
+//     margin: 0 auto;
+// }
+
+// .rm-desktop ul {
+//     display: none;
+// }
+
+// /* Hide responsive/mobile menu, leave this to kmom02 */
+// .rm-navbar-max {
+//     display: none;
+// }
+
+/**
+*Header layout
+*/
+.outer-wrap-header {
+    background-color: @bgColorHtml;
+    #design-mixin.clearfix();
+}
+
+.inner-wrap-header {
+    max-width: 100%;
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    width: 20%;
+    float: left;
+}
+
+.region-header-col-2 {
+    width: 60%;
+    float: left;
+    text-align: center;
+}

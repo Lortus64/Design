@@ -1,0 +1,101 @@
+/*!
+ * Stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: none;
+}
+
+// /* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+    display: none;
+}
+
+html {
+    background-color: #414141;
+    color: white;
+}
+
+.wrap-all {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #575757;
+    padding: 1em;
+}
+
+@bgColora: #b84ac9;
+@bordernav: #575757;
+@footerborder: #999;
+
+a {
+    color: @bgColora;
+    text-decoration: none;
+}
+
+/*HEADER*/
+.site-logo {
+    display: none;
+}
+
+.region-header {
+    background-color: @bordernav;
+}
+
+/*Navbar*/
+.region-header-col-2 {
+    padding: 1em;
+    text-align: center;
+}
+
+.region-header-col-2 li {
+    display: inline-block;
+    border: 1px solid @bordernav;
+    background-color: @bgColora;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    background-color: @bgColora;
+}
+
+/*Wrap*/
+.outer-wrap-flash{
+    overflow: hidden;
+    margin: none;
+}
+
+/*MAIN*/
+article {
+
+}
+
+.region-sidebar-left li{
+    background-color: @bgColora;
+    border: 1px solid @bordernav;
+}
+
+.next {
+    float: right;
+}
+
+.previous {
+    
+}
+
+/*FOOTER*/
+.footer-column-wrapper {
+    margin-top: 3em;
+}
+
+.footer-column-wraper {
+    width: 31.5%;
+    float: left;
+    border: 1px solid @footerborder;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}

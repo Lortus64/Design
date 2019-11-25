@@ -1,0 +1,142 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**----------------------------------------------------------
+ * General layout
+ */
+.inner-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #575757;
+}
+
+a {
+    color: @bgColora;
+    text-decoration: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    background-color: @bgColora;
+}
+
+// .outer-wrap-main {
+//     text-align: center;
+// }
+
+/**----------------------------------------------------------
+*Header layout
+*/
+.outer-wrap-header {
+    height: auto;
+}
+
+.site-logo {
+    display: none;
+}
+
+.region-header-col-2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.region-header-col-2 li {
+    display: inline-block;
+    border: 1px solid @bordernav;
+    background-color: @bgColora;
+}
+
+/*Wrap*/
+.outer-wrap-flash{
+    overflow: hidden;
+    margin: none;
+}
+
+/**----------------------------------------------------------
+/*Main and sidebar
+*/
+.inner-wrap-main {
+    overflow: auto;
+}
+
+.region-sidebar-left a{
+    color: white;
+}
+
+.region-sidebar-left li{
+    background-color: @bgColora;
+    border: 1px solid @bordernav;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.region-main {
+    width: 65%;
+    margin-left: 10%;
+    float: left;
+
+    &.has-sidebar{
+        margin: 5%;
+    }
+
+    &.has-sidebar-left.has-sidebar-right{
+        width: 45%;
+    }
+}
+
+.region-sidebar-left{
+    width: 15%;
+    float: left;
+    padding-left: 1em;
+}
+
+.region-sidebar-left.has-sidebar-right {
+    width: 20%;
+}
+
+.region-sidebar-right {
+    width: 22%;
+    float: left;
+    padding-right: 1em;
+}
+
+.region-sidebar-right.has-sidebar-left {
+    width: 20%;
+}
+
+.next {
+    float: right;
+}
+
+/**----------------------------------------------------------
+* Footer layout
+*/
+.footer-column-wrapper {
+    margin-top: 3em;
+}
+
+.footer-column {
+    width: 31.5%;
+    float: left;
+    border: 1px solid #999;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.outer-wrap-footer {
+    background-color: #5c2464;
+}
+
+.site-footer {
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
