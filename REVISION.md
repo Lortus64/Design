@@ -14,3 +14,7 @@ v2.0* (2019-11-25)
 kmom02 färdig
 less implementerad
 lite ny design
+
+v3.0* (2019-12-03)
+------------------
+*kmom03 färdig

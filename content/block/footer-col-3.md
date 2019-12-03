@@ -1,3 +1,3 @@
 #### Footer col 3
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Om du har en dålig dag så har jag en länk för det också: [Link](https://www.youtube.com/watch?v=VN_WzpQgDtY)

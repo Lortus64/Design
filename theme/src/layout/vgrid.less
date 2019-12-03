@@ -1,0 +1,229 @@
+/**
+ * Layout style using vgrid.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**---------------------------------------------------------------------------------------------------------------------------
+ * General layout
+ */
+
+@padding: 0.5em;
+
+.row {
+    #desinax-vgrid.row();
+    width: 100;
+}
+
+.outer-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+    background-color: @bgwrap;
+}
+
+a {
+    color: @bgColora;
+    text-decoration: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    background-color: @bgColora;
+}
+
+/**---------------------------------------------------------------------------------------------------------------------------
+*Header layout
+*/
+.site-logo {
+    display: none;
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+    color: red;
+
+    &.inner-wrap-header{
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+.inner-wrap-header{
+   #desinax-vgrid.grid(100%);
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(5);
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(14);
+    text-align: center;
+}
+
+.region-header-col-2 li {
+    display: inline-block;
+    border: 1px solid @bordernav;
+    background-color: @bgColora;
+}
+
+/*Wrap*/
+.region-flash {
+    #desinax-vgrid.column(@columns);
+}
+
+.outer-wrap-flash{
+    overflow: hidden;
+    //margin: none;
+}
+
+.region-breadcrumb {
+    #desinax-vgrid.column(@columns);
+}
+/**---------------------------------------------------------------------------------------------------------------------------
+/*Main and sidebar
+*/
+.region-sidebar-left a{
+    color: white;
+}
+
+.region-sidebar-left li{
+    background-color: @bgColora;
+    border: 1px solid @bordernav;
+    display: block;
+}
+
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(2);
+
+    &.has-sidebar{
+        #desinax-vgrid.push(1);
+    }
+
+    &.has-sidebar-right{
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+        #desinax-vgrid.push(1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right{
+        #desinax-vgrid.column(@columns - 10);
+    }
+}
+
+.region-sidebar-left{
+    #desinax-vgrid.column(@columns * 1 / 4 - 1.5);
+    #desinax-vgrid.push(0.5);
+
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1);
+    }
+}
+
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+    #desinax-vgrid.push(1);
+
+    &.has-sidebar-left {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1);
+    }
+}
+
+.next {
+    float: right;
+}
+
+/**---------------------------------------------------------------------------------------------------------------------------
+* Footer layout
+*/
+.inner-wrap-footer {
+    
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+}
+
+.footer-column-x {
+    padding-left: @padding;
+}
+
+.outer-wrap-footer {
+    background-color: #5c2464;
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns - 1);
+    #desinax-vgrid.push(1);
+}
+
+.outer-wrap-header {
+    background-color: @bgColorHtml;
+    //#design-mixin.clearfix();
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    //width: 20%;
+    //float: left;
+}
+
+.region-header-col-2 {
+    //width: 60%;
+    //float: left;
+    //text-align: center;
+}
+
+/**---------------------------------------------------------------------------------------------------------------------------
+*Responsive 1,2,3
+*/
+
+@media screen and (max-width: 1000px) {
+    .region-main {
+        #desinax-vgrid.column(@columns);
+        //#desinax-vgrid.push(0);
+
+        &.has-sidebar-left.has-sidebar-right{
+            #desinax-vgrid.column(@columns);
+        }
+    }
+    
+    .region-sidebar-right {
+
+        &.has-sidebar-left {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+        li {
+            #desinax-vgrid.column(4);
+            overflow: hidden;
+        }
+
+        &.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .region-main.has-sidebar-right{
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
+    }
+}

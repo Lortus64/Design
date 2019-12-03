@@ -1,5 +1,5 @@
 /*!
- * LESS version of the stylesheet for design kmom01.
+ * LESS version of the stylesheet for design kmom02.
  *
  * This stylesheet is for the design course and kmom01. Its intention is to
  * use kmom01.css and lessify the style and use this as a wrapper for the new
@@ -4749,7 +4749,6 @@ template {
  * Base style to affect HTML elements on a general scale.
  */
 html {
-  overflow-y: scroll;
   background-color: #5c2464;
 }
 body {
@@ -4866,6 +4865,7 @@ li a {
 }
 .footer-column {
   width: 31.5%;
+  height: 7em;
   float: left;
   border: 1px solid #999;
   padding: 0.5em;
@@ -4929,11 +4929,6 @@ li a {
   .rm-desktop a {
     padding-left: 0.5em;
     padding-right: 0.5em;
-  }
-  .footer-column {
-    width: 100%;
-    border: 1px solid #999;
-    padding: 0.5em;
   }
   .region-header-col-2 {
     width: auto;

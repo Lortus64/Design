@@ -1,5 +1,5 @@
 /*!
- * LESS version of the stylesheet for design kmom02.
+ * LESS version of the stylesheet for design kmom03.
  *
  * This stylesheet is for the design course and kmom01. Its intention is to
  * use kmom01.css and lessify the style and use this as a wrapper for the new
@@ -33,19 +33,28 @@
 @import "module/stylechooser.less";  // Just an example module
 
 
+
+
+
 /**
- * Base style to affect HTML elements on a general scale.
+ * Import the vertical grid.
  */
-@import "base/base.less";
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
 
 
+ // Default grid, change to fit your requirements.
+//  @columnWidth:   30;
+//  @gutterWidth:   10;
+//  @columns:       24;
+//  @gridType:      "float"; // "flex"
 
 /**
  * Layout style for general structure of header, navbar, main, footer
  * and other regions of the page including route specific styles.
  */
-@import "layout/layout.less";
-@import "layout/layout_kmom02.less";
+// @import "layout/layout.less";
+// @import "layout/layout_kmom02.less";
 @import "layout/responsive.less";
 @import "layout/regions.less";     // To add style for ?regions
 
@@ -57,7 +66,29 @@
 @import "@desinax/responsive-menu/less/responsive-menu.less";
 //@import "@desinax/responsive-menu/less/media-queries.less";
 
+/**
+ * Import the typographic grid.
+ */
+ @import "@desinax/typographic-grid/less/typography-font-families.less";
+ @import "@desinax/typographic-grid/less/typography-defaults.less";
 
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+    color: red;
+}
+
+//Adapt a typography grid to my style
+@fontFamilyBody: "serif";//"sans-serif";
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+//@import "base/base.less";
+@import "base/base_kmom03.less";
 
 /**
  * My own settings, not currently in their own module.
@@ -72,3 +103,16 @@
 @bgColorHtml: #5c2464; //header and footer bg
 @bgColorBody: #414141; //body bg
 @bgwrap: #575757;
+@colorBody: #fff;//Text color
+@bgColorCodeInline: #b84ac9;//code bg color
+
+// Set font family to use
+@fontFamilyHeadings: 'Lato', sans-serif;
+@fontFamilyBody: @fontFamilyMyriadPro;
+@fontFamilyCode: @fontFamilyCourier;
+
+
+
+// Magic number and base fontsize
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 16px;
