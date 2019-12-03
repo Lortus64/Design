@@ -4795,16 +4795,16 @@ template {
   display: block;
   clear: both;
 }
-.outer-wrap {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1100px;
-}
 .inner-wrap {
   margin-right: auto;
   margin-left: auto;
   max-width: 1100px;
   background-color: #575757;
+}
+.inner-wrap-header {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
 }
 a {
   color: #b84ac9;
@@ -4839,11 +4839,6 @@ li a {
   .vgrid .inner-wrap.inner-wrap-header {
     background-size: 100% auto;
   }
-}
-.inner-wrap-header {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
 }
 .region-header-col-1,
 .region-header-col-3 {
