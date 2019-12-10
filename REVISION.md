@@ -18,3 +18,9 @@ lite ny design
 v3.0* (2019-12-03)
 ------------------
 *kmom03 färdig
+
+v4.0* (2019-12-10)
+------------------
+*kmom04 färdig
+*rapport sida
+*3 nya styles

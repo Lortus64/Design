@@ -4818,6 +4818,9 @@ li a {
 /**---------------------------------------------------------------------------------------------------------------------------
 *Header layout
 */
+.inner-wrap-header {
+  background-color: #000;
+}
 .site-logo {
   display: none;
 }
@@ -4882,8 +4885,11 @@ li a {
 /**---------------------------------------------------------------------------------------------------------------------------
 /*Main and sidebar
 */
+.inner-wrap-breadcrumb a {
+  color: #000;
+}
 .region-sidebar-left a {
-  color: white;
+  color: #fff;
 }
 .region-sidebar-left li {
   background-color: #b84ac9;
@@ -4949,6 +4955,12 @@ li a {
 .next {
   float: right;
 }
+.next,
+.previous,
+.next a,
+.previous a {
+  color: #000;
+}
 /**---------------------------------------------------------------------------------------------------------------------------
 * Footer layout
 */
@@ -4963,7 +4975,7 @@ li a {
   padding-left: 0.5em;
 }
 .outer-wrap-footer {
-  background-color: #5c2464;
+  background-color: #fff;
 }
 .site-footer {
   display: inline;

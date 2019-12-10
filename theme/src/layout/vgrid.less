@@ -12,6 +12,11 @@
  */
 
 @padding: 0.5em;
+@sidbarColor: #fff;
+@footreWrapBg: #fff;
+@nextColor: #000;
+@breadcrumb: #000;
+@headColor: #000;
 
 .row {
     #desinax-vgrid.row();
@@ -45,6 +50,10 @@ li a {
 /**---------------------------------------------------------------------------------------------------------------------------
 *Header layout
 */
+.inner-wrap-header{
+    background-color: @headColor;
+}
+
 .site-logo {
     display: none;
 }
@@ -59,8 +68,6 @@ li a {
         #desinax-vgrid.showGrid(@gridImage);
     }
 }
-
-
 
 .region-header-col-1,
 .region-header-col-3 {
@@ -94,8 +101,13 @@ li a {
 /**---------------------------------------------------------------------------------------------------------------------------
 /*Main and sidebar
 */
+
+.inner-wrap-breadcrumb a {
+    color: @breadcrumb;
+}
+
 .region-sidebar-left a{
-    color: white;
+    color: @sidbarColor;
 }
 
 .region-sidebar-left li{
@@ -144,6 +156,13 @@ li a {
     float: right;
 }
 
+.next,
+.previous,
+.next a,
+.previous a {
+    color: @nextColor;
+}
+
 /**---------------------------------------------------------------------------------------------------------------------------
 * Footer layout
 */
@@ -160,7 +179,7 @@ li a {
 }
 
 .outer-wrap-footer {
-    background-color: #5c2464;
+    background-color: @footreWrapBg;
 }
 
 .site-footer {
