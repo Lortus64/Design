@@ -20,20 +20,15 @@
 
 .row {
     #desinax-vgrid.row();
-    width: 100;
 }
-
-// .outer-wrap {
-//     #desinax-vgrid.grid(1100px);
-// }
 
 .inner-wrap {
     #desinax-vgrid.grid(1100px);
     background-color: @bgwrap;
 }
 
-.inner-wrap-header {
-   #desinax-vgrid.grid(100%);
+.inner-wrap-header .row{
+    max-width: 100%;
 }
 
 a {
@@ -71,11 +66,11 @@ li a {
 
 .region-header-col-1,
 .region-header-col-3 {
-    #desinax-vgrid.column(5);
+    #desinax-vgrid.column(3.5);
 }
 
 .region-header-col-2 {
-    #desinax-vgrid.column(14);
+    #desinax-vgrid.column(17);
     text-align: center;
 }
 
@@ -202,6 +197,22 @@ li a {
     //width: 60%;
     //float: left;
     //text-align: center;
+}
+
+// Enable style from the module and optinally add customized layout
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
 }
 
 /**---------------------------------------------------------------------------------------------------------------------------

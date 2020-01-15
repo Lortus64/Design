@@ -4788,7 +4788,6 @@ template {
   width: 101.04166667%;
   margin-left: -0.52083333%;
   margin-right: -0.52083333%;
-  width: 100;
 }
 .row::after {
   content: "";
@@ -4801,9 +4800,7 @@ template {
   max-width: 1100px;
   background-color: #575757;
 }
-.inner-wrap-header {
-  margin-right: auto;
-  margin-left: auto;
+.inner-wrap-header .row {
   max-width: 100%;
 }
 a {
@@ -4847,14 +4844,14 @@ li a {
 .region-header-col-3 {
   display: inline;
   float: left;
-  width: 19.79166667%;
+  width: 13.54166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
 .region-header-col-2 {
   display: inline;
   float: left;
-  width: 57.29166667%;
+  width: 69.79166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   text-align: center;
@@ -5080,7 +5077,7 @@ li a {
 }
 @media screen and (max-width: 840px) {
   .region-sidebar-left {
-    width: 100%;
+    max-width: 100%;
   }
   .region-sidebar-left li {
     display: inline-block;
