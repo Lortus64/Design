@@ -1,0 +1,143 @@
+/*!
+ * LESS version of the stylesheet for design kmom04 Dark.
+ *
+ * This stylesheet is for the design course and kmom01. Its intention is to
+ * use kmom01.css and lessify the style and use this as a wrapper for the new
+ * style.
+ */
+
+@import "mixin/clearfix.less";
+
+.clearfix() {
+    #design-mixin.clearfix();
+}
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+/**
+* Font Awesome.
+*/
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+/**
+*Internal self contained moduels, save in directory module/.
+*/
+//@import "module/kmom01.less";
+@import "module/stylechooser.less";  // Just an example module
+
+
+
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
+
+@import "@desinax/figure/less/figure.less";
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+
+// @import "asciinema.less";
+// @import "codepen.less";
+// @import "figure.less";
+
+// Enable style from the module and optinally add customized layout
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+ // Default grid, change to fit your requirements.
+//  @columnWidth:   30;
+//  @gutterWidth:   10;
+//  @columns:       24;
+//  @gridType:      "float"; // "flex"
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+// @import "layout/layout.less";
+// @import "layout/layout_kmom02.less";
+@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+//@import "@desinax/responsive-menu/less/media-queries.less";
+
+/**
+ * Import the typographic grid.
+ */
+ @import "@desinax/typographic-grid/less/typography-font-families.less";
+ @import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+    color: red;
+}
+
+//Adapt a typography grid to my style
+@fontFamilyBody: "serif";//"sans-serif";
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+//@import "base/base.less";
+@import "base/base_kmom03.less";
+
+/**
+ * My own settings, not currently in their own module.
+ */
+
+//Var for kmom01.less
+@bgColora: #b84ac9; //a and nav bg
+@bordernav: #575757; // navborder
+
+//Var for base.less
+@bgColorHtml: #5c2464; //header and footer bg
+@headColor: #aa43b9;//Header color
+@bgColorBody: #414141; //body bg
+@bgwrap: #575757;
+@colorBody: #fff;//Text color
+@breadcrumb: #fff;
+@nextColor: #fff;// Next pre color
+@bgColorCodeInline: #b84ac9;//code bg color
+@footreWrapBg: #5c2464;//footer warp bg
+
+// Set font family to use
+@fontFamilyHeadings: 'Lato', sans-serif;
+@fontFamilyBody: @fontFamilyMyriadPro;
+@fontFamilyCode: @fontFamilyCourier;
+
+
+
+// Magic number and base fontsize
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 16px;

@@ -23,9 +23,10 @@ return [
                 //"css/kmom01.css",
                 //"css/kmom02.min.css"
                 //"css/kmom03.min.css"
-                "css/04_dark.css"
+                //"css/04_dark.css"
                 //"css/04_colorful.min.css"
                 //"css/04_minimalistic.min.css"
+                "css/kmom05.min.css"
             ],
             "javascripts" => [
                 "js/responsive-menu.js",
