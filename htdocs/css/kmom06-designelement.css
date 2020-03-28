@@ -1,5 +1,5 @@
 /*!
- * LESS version of the stylesheet for design kmom04 Colorufl.
+ * LESS version of the stylesheet for design kmom06 Dark.
  *
  * This stylesheet is for the design course and kmom01. Its intention is to
  * use kmom01.css and lessify the style and use this as a wrapper for the new
@@ -10,8 +10,8 @@
  * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
  */
 /**
-* Normalize and reset the style.
-*/
+ * Normalize and reset the style.
+ */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -318,8 +318,8 @@ template {
   display: none;
 }
 /**
-* Font Awesome.
-*/
+ * Font Awesome.
+ */
 /*!
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4731,8 +4731,8 @@ template {
   font-family: 'Font Awesome 5 Brands';
 }
 /**
-*Internal self contained moduels, save in directory module/.
-*/
+ *Internal self contained moduels, save in directory module/.
+ */
 /**
  * Style for the stylechooser.
  */
@@ -4743,8 +4743,8 @@ template {
  * Style
  */
 /**
- * Import the vertical grid.
- */
+  * Import the vertical grid.
+  */
 /**
  * Fluid and Responsive Vertical Grid
  */
@@ -4798,25 +4798,26 @@ template {
   margin-right: auto;
   margin-left: auto;
   max-width: 1100px;
-  background-color: #ececec;
+  background-color: #575757;
 }
 .inner-wrap-header .row {
   max-width: 100%;
 }
 a {
-  color: #ee7b1d;
+  color: #9357b6;
   text-decoration: none;
 }
 li a {
   text-decoration: none;
   color: black;
-  background-color: #ee7b1d;
+  background-color: #9357b6;
 }
 /**---------------------------------------------------------------------------------------------------------------------------
 *Header layout
 */
 .inner-wrap-header {
-  background-color: #cf6502;
+  background-color: #584cae;
+  filter: contrast(80%);
 }
 .site-logo {
   display: none;
@@ -4858,8 +4859,9 @@ li a {
 }
 .region-header-col-2 li {
   display: inline-block;
-  border: 1px solid #464646;
-  background-color: #ee7b1d;
+  border: 1px solid #575757;
+  background-color: #9357b6;
+  filter: contrast(120%);
 }
 /*Wrap*/
 .region-flash {
@@ -4882,15 +4884,21 @@ li a {
 /**---------------------------------------------------------------------------------------------------------------------------
 /*Main and sidebar
 */
+.blog-list-item {
+  border: 2px solid #80aae2;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  padding: 1em;
+}
 .inner-wrap-breadcrumb a {
-  color: #000;
+  color: #fff;
 }
 .region-sidebar-left a {
-  color: #000;
+  color: #fff;
 }
 .region-sidebar-left li {
-  background-color: #ee7b1d;
-  border: 1px solid #464646;
+  background-color: #9357b6;
+  border: 1px solid #575757;
   display: block;
 }
 .region-main {
@@ -4956,7 +4964,7 @@ li a {
 .previous,
 .next a,
 .previous a {
-  color: #000;
+  color: #fff;
 }
 /**---------------------------------------------------------------------------------------------------------------------------
 * Footer layout
@@ -4972,7 +4980,7 @@ li a {
   padding-left: 0.5em;
 }
 .outer-wrap-footer {
-  background-color: #cf6502;
+  background-image: linear-gradient(rgba(255, 0, 0, 0), #584cae);
 }
 .site-footer {
   display: inline;
@@ -4983,7 +4991,7 @@ li a {
   margin-left: 4.6875%;
 }
 .outer-wrap-header {
-  background-color: #cf6502;
+  background-image: linear-gradient(#584cae, rgba(255, 0, 0, 0));
 }
 /**---------------------------------------------------------------------------------------------------------------------------
 *Responsive 1,2,3
@@ -5049,10 +5057,135 @@ li a {
     margin-left: 0.52083333%;
   }
 }
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
+/** --------------------------------------------------------------
+ * Figure through .figure
  */
+/**
+ * Figure with ASCIINEMA
+ */
+/**
+ * Figure with Codepen
+ */
+figure.figure,
+figure.asciinema,
+figure.codepen,
+figure.figure-codepen {
+  display: table;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  /* Chrome shinks images in td */
+  /* Position the images */
+}
+figure.figure img {
+  max-width: 100%;
+  display: block;
+}
+figure.figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 12px;
+}
+figure.figure figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+figure.figure td img {
+  max-width: none;
+}
+figure.figure.center {
+  clear: both;
+  margin: auto;
+}
+figure.figure.center figcaption {
+  text-align: center;
+}
+figure.figure.left {
+  float: left;
+  margin-right: 0.5em;
+}
+figure.figure.right {
+  float: right;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 963px) {
+  figure.figure.left.w67,
+  figure.figure.right.w67 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w67 img,
+  figure.figure.right.w67 img {
+    width: 962.5px;
+  }
+}
+@media screen and (max-width: 733px) {
+  figure.figure.left.w50,
+  figure.figure.right.w50 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w50 img,
+  figure.figure.right.w50 img {
+    width: 733.33333333px;
+  }
+}
+@media screen and (max-width: 688px) {
+  figure.figure.left.w40,
+  figure.figure.right.w40 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w40 img,
+  figure.figure.right.w40 img {
+    width: 687.5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  figure.figure.left.w33,
+  figure.figure.right.w33 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w33 img,
+  figure.figure.right.w33 img {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 367px) {
+  figure.figure.left.w25,
+  figure.figure.right.w25 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w25 img,
+  figure.figure.right.w25 img {
+    width: 366.66666667px;
+  }
+}
+figure.asciinema {
+  display: block;
+}
+figure.asciinema figcaption {
+  display: block;
+}
+figure.asciinema .asciicast {
+  margin: 0 !important;
+}
+figure.codepen,
+figure.figure-codepen {
+  width: 100%;
+}
+/**
+  * Layout style for general structure of header, navbar, main, footer
+  * and other regions of the page including route specific styles.
+  */
 /**
  * Layout for responsive style through media queries.
  */
@@ -5081,8 +5214,8 @@ li a {
   }
   .region-sidebar-left li {
     display: inline-block;
-    border: 1px solid #464646;
-    background-color: #ee7b1d;
+    border: 1px solid #575757;
+    background-color: #9357b6;
     padding: 0.5em;
     margin: 0.2em;
   }
@@ -5130,8 +5263,8 @@ li a {
   color: #111;
 }
 /**
-* A responsive menu.
-*/
+ * A responsive menu.
+ */
 /**
  * Style for responsive menu
  */
@@ -5358,8 +5491,8 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   right: 0;
 }
 /**
- * Import the typographic grid.
- */
+  * Import the typographic grid.
+  */
 /**
  * Typographic font families to choose from.
  */
@@ -5398,18 +5531,18 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   color: red;
 }
 /**
- * Base style to affect HTML elements on a general scale.
- */
+  * Base style to affect HTML elements on a general scale.
+  */
 /**
  * Base style to affect HTML elements on a general scale.
  */
 html {
-  background-color: #cf6502;
+  background-color: #584cae;
 }
 body {
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #fff;
   background-image: url("../img/theme/spaceBG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -5558,7 +5691,7 @@ samp {
   padding-right: 1px;
 }
 code {
-  background-color: #fff;
+  background-color: #80aae2;
 }
 pre,
 div.code,
@@ -5704,5 +5837,5 @@ hr::after {
   background-color: #fff;
 }
 /**
- * My own settings, not currently in their own module.
- */
+  * My own settings, not currently in their own module.
+  */

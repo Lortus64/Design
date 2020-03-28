@@ -5410,7 +5410,10 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  background-color: #fff;
+  background-image: url("../img/theme/spaceBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   font: 16px/1.5 MyriadPro-Regular, "Myriad Pro Regular", MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 }
 img {
